@@ -1,0 +1,5 @@
+vendor
+sass/.sass-cache
+css/
+.env*
+!.env-example
