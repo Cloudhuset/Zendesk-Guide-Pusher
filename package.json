@@ -1,17 +1,18 @@
 {
-  "name": "kraeftens-bekaempelse",
+  "name": "zendesk-guide-pusher",
   "version": "1.0.0",
-  "description": "Kræftens bekæmpelse help center",
+  "description": "Keep your Zendesk help center in version control and push to production",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "gulp": "^3.9.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "request": "^2.79.0"
+    "fs": "0.0.1-security",
+    "lodash": "4.17.4",
+    "mkdirp-promise": "5.0.1",
+    "request": "2.81.0",
+    "when": "3.7.8"
   }
 }

@@ -1,5 +1,2 @@
-vendor
-sass/.sass-cache
-css/
-.env*
-!.env-example
+.DS_Store
+node_modules

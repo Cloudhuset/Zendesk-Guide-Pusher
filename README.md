@@ -1,15 +1,47 @@
 # Zendesk Guide Pusher
 
-## What is it?
-Zendesk Guide Pusher is a small tool that will help you develop your Zendesk Guide theme locally and push it to Zendesk. This will enable you to have your entire theme in version control. The default template is the Zendesk Copenhagen theme.
+## What is this?
+A node module to help you push and download your Zendesk help center theme, in terms allowing you to version control your theme. Note that this is only for `html`, `css` and `js`. `Assets` and `Appearance` need to be handled in the Zendesk theme editor.
+At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Customize design (Eye icon)`
 
-## How to develop locally
-* Make sure you have gulp installed
-* Run `yarn install` or `npm install` to get js dependencies
-* Duplicate .env-example and call it .env
-* Log into zendesk theme editor with chrome devtools open. Go to the network tab and check "preserve log". Now make a change to a file and click save. Find the PUT request to https://yourdomain.zendesk.com/hc/admin/help_centers/{your_help_center_id}. Now grab the Cookie and X-CSRF-Token from the request headers and the "help center id" and "theme id" from the response, and paste them into your .env file. You need to do this everytime you log in, but only the cookie and the csrf token will change.
-* From the root of this project run `gulp sass:watch` to watch and compile sass into css and `gulp zendesk:watch` to watch the template files, javascript and css for changes. 
-* Now make your changes to the files inside the /templates folder and gulp will automatically push the code
 
-## Do you have any ideas?
-Please let us know by making an issue here on github. Also feel free to contribute to the development, by making a pull request.
+## How to install
+Node >= 4  
+Add this line to package.json dependencies:
+```
+"zendesk-guide-pusher": "git+ssh://git@github.com:Cloudhuset/Zendesk-Guide-Pusher.git#master"
+```
+
+
+## Preparing config data
+* Login to your Zendesk theme editor with chrome devtools open
+* Go to the network tab and check "preserve log"
+* Make a change to a file and click save
+* Find the PUT request to `https://yourdomain.zendesk.com/hc/admin/help_centers/{your_help_center_id}`.
+* Grab the Cookie and X-CSRF-Token from the request headers and the "help center id" and "theme id" from the response, keep them in this format:
+  __Note: Cookie and X-CSRF-Token will change everytime you login__
+  ```
+  {
+    HOST: '<yourdomain.zendesk.com>',
+    HC_ID: '<your_help_center_id>',
+    THEME_ID: '',
+    COOKIE: '',
+    CSRF_TOKEN: ''
+  }
+  ```
+
+
+## Functions
+
+### download(config)
+__Returns:__ promise  
+Will download the theme files (html, css, js) and saved them in `theme` folder
+
+### upload(config)
+__Returns:__ promise  
+Will process the theme files and upload (__won't publish__). You can then check your changes in the Zendesk theme editor.  
+__Note: Using this function somehow won't change the publish button state in the theme editor. Need to run the publish function below for publishing.__
+
+### publish(config)
+__Returns:__ promise  
+Will publish whatever in the theme editor.
