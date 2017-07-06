@@ -1,7 +1,7 @@
 # Zendesk Guide Pusher
 
 ## What is this?
-A tool to help you download and upload zendesk help center, allow you to be able to version control your theme. Note that this is only for `html`, `css` and `js`. For the `assets` and `Appearance` need to be done in the Zendesk theme editor.
+A node module to help you push and download your Zendesk help center theme, in terms allowing you to version control your theme. Note that this is only for `html`, `css` and `js`. `Assets` and `Appearance` need to be handled in the Zendesk theme editor.
 At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Customize design (Eye icon)`
 
 
@@ -9,7 +9,7 @@ At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Custom
 Node >= 4  
 Add this line to package.json dependencies:
 ```
-"zendesk-guide-pusher": "git+ssh://git@github.com:lusimail/zendesk-guide-pusher.git#master"
+"zendesk-guide-pusher": "git+ssh://git@github.com:Cloudhuset/Zendesk-Guide-Pusher.git#master"
 ```
 
 
