@@ -1,3 +1,6 @@
+// Get environment variables
+require('dotenv').config();
+
 var gulp = require('gulp');
 var config = require('config');
 var theme = require('zendesk-guide-pusher');
