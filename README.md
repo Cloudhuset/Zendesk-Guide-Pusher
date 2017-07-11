@@ -29,6 +29,9 @@ Add this line to package.json dependencies:
     CSRF_TOKEN: ''
   }
   ```
+  
+## Boilerplate
+For a boilerplate theme project implementing this module, please have a look at [Cloudhuset/Zendesk-Guide-Pusher-Boilerplate](https://github.com/Cloudhuset/Zendesk-Guide-Pusher-Boilerplate)
 
 
 ## Functions
