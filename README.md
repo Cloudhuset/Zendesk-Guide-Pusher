@@ -1,4 +1,7 @@
-# Zendesk Guide Pusher
+# Zendesk Guide Pusher - DEPRECATED
+
+## Deprecated
+This repository is deprecated. Please look at https://github.com/Cloudhuset/Zendesk-Guide-Theme-Boilerplate instead.
 
 ## What is this?
 A node module to help you push and download your Zendesk help center theme, in terms allowing you to version control your theme. Note that this is only for `html`, `css` and `js`. `Assets` and `Appearance` need to be handled in the Zendesk theme editor.
