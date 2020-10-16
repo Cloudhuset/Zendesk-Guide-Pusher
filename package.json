@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "fs": "0.0.1-security",
-    "lodash": "4.17.4",
+    "lodash": "4.17.20",
     "mkdirp-promise": "5.0.1",
     "request": "2.81.0",
     "when": "3.7.8"
